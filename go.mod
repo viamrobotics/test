@@ -1,6 +1,6 @@
 module github.com/edaniels/test
 
-go 1.15
+go 1.16
 
 require (
 	github.com/edaniels/golinters v0.0.4
