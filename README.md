@@ -10,7 +10,7 @@ package test
 import (
 	"testing"
 
-	"github.com/edaniels/test"
+	"go.viam.com/test"
 )
 
 func TestExample(t *testing.T) {

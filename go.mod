@@ -1,4 +1,4 @@
-module github.com/edaniels/test
+module go.viam.com/test
 
 go 1.16
 
