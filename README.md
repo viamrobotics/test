@@ -1,6 +1,6 @@
 # test
 
-A golang test library. It's essentially a light wrapper around all assertions from github.com/smartystreets/assertions.
+A golang test library. It's essentially a light wrapper around all assertions from https://github.com/smartystreets/assertions.
 
 ## Usage
 
