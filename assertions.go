@@ -17,8 +17,6 @@ var (
 	ShouldAlmostEqual            = assertions.ShouldAlmostEqual
 	ShouldNotAlmostEqual         = assertions.ShouldNotAlmostEqual
 	ShouldEqualJSON              = assertions.ShouldEqualJSON
-	ShouldResemble               = assertions.ShouldResemble
-	ShouldNotResemble            = assertions.ShouldNotResemble
 	ShouldPointTo                = assertions.ShouldPointTo
 	ShouldNotPointTo             = assertions.ShouldNotPointTo
 	ShouldBeNil                  = assertions.ShouldBeNil

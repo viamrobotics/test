@@ -4,6 +4,8 @@ import (
 	"fmt"
 
 	"github.com/google/go-cmp/cmp"
+	"github.com/smartystreets/assertions"
+	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/testing/protocmp"
 )
 
@@ -43,4 +45,34 @@ func ShouldNotResembleProto(actual interface{}, expected ...interface{}) string 
 		return fmt.Sprintf(shouldNotHaveResembled, actual, expected[0])
 	}
 	return success
+}
+
+// ShouldResemble receives exactly two parameters and does a deep equal check (see reflect.DeepEqual)
+func ShouldResemble(actual interface{}, expected ...interface{}) string {
+	if message := need(1, expected); message != success {
+		return message
+	}
+
+	_, actualIsProto := actual.(proto.Message)
+	_, expectedIsProto := expected[0].(proto.Message)
+	if actualIsProto && expectedIsProto {
+		return ShouldResembleProto(actual, expected...)
+	}
+
+	return assertions.ShouldResemble(actual, expected...)
+}
+
+// ShouldNotResemble receives exactly two parameters and does an inverse deep equal check (see reflect.DeepEqual)
+func ShouldNotResemble(actual interface{}, expected ...interface{}) string {
+	if message := need(1, expected); message != success {
+		return message
+	}
+
+	_, actualIsProto := actual.(proto.Message)
+	_, expectedIsProto := expected[0].(proto.Message)
+	if actualIsProto && expectedIsProto {
+		return ShouldNotResembleProto(actual, expected...)
+	}
+
+	return assertions.ShouldNotResemble(actual, expected...)
 }
