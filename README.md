@@ -22,3 +22,8 @@ func TestExample(t *testing.T) {
 	test.That(t, 1, ShouldNotEqual, "1")
 }
 ```
+
+## License 
+Copyright 2021-2022 Viam Inc.
+
+Apache 2.0 - See [LICENSE](https://github.com/viamrobotics/test/blob/main/LICENSE) file
