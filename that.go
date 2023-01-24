@@ -8,3 +8,4 @@ func That(tb testing.TB, actual interface{}, assert func(actual interface{}, exp
 		tb.Fatal(result)
 	}
 }
+a
