@@ -3,8 +3,8 @@ package test
 import (
 	"fmt"
 
+	assertions "github.com/dgottlieb/smarty-assertions"
 	"github.com/google/go-cmp/cmp"
-	"github.com/smartystreets/assertions"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/testing/protocmp"
 )

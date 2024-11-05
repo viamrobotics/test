@@ -1,6 +1,6 @@
 package test
 
-import "github.com/smartystreets/assertions"
+import assertions "github.com/dgottlieb/smarty-assertions"
 
 var (
 	ShouldContain                = assertions.ShouldContain
