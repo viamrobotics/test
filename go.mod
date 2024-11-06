@@ -2,8 +2,6 @@ module go.viam.com/test
 
 go 1.22
 
-toolchain go1.23.2
-
 require (
 	github.com/dgottlieb/smarty-assertions v1.2.1
 	github.com/edaniels/golinters v0.0.4
