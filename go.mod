@@ -5,7 +5,7 @@ go 1.21.13
 require (
 	github.com/dgottlieb/smarty-assertions v1.2.6
 	github.com/edaniels/golinters v0.0.4
-	github.com/golangci/golangci-lint v1.39.0
+	github.com/golangci/golangci-lint/v2 v2.5.0
 	github.com/google/go-cmp v0.5.4
 	google.golang.org/protobuf v1.25.0
 )
