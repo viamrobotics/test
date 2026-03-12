@@ -43,3 +43,7 @@ coverage.txt
 out/
 .idea/*
 bin/
+
+# Claude Code
+.claude/worktrees
+.claude/settings.local.json
