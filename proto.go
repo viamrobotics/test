@@ -33,8 +33,8 @@ func ShouldResembleProto(actual interface{}, expected ...interface{}) string {
 		return ""
 	}
 
-	return fmt.Sprintf(shouldHaveResembled, actual, expected[0]) +
-		cmp.Diff(actual, expected[0], protocmp.Transform())
+	return fmt.Sprintf(shouldHaveResembled, expected[0], actual) +
+		cmp.Diff(expected[0], actual, protocmp.Transform())
 }
 
 // ShouldNotResembleProto receives exactly two parameters and does an inverse proto equal check.
@@ -42,7 +42,7 @@ func ShouldNotResembleProto(actual interface{}, expected ...interface{}) string 
 	if message := need(1, expected); message != success {
 		return message
 	} else if ShouldResembleProto(actual, expected[0]) == success {
-		return fmt.Sprintf(shouldNotHaveResembled, actual, expected[0])
+		return fmt.Sprintf(shouldNotHaveResembled, expected[0], actual)
 	}
 	return success
 }
